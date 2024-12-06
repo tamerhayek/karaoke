@@ -1,5 +1,7 @@
 # karaoke
 
+![Logo Karaoke](./static/logo.webp)
+
 Stream your input device into your output device.
 
 This repository is using venv for development.
@@ -33,3 +35,10 @@ Use the following command to run the app:
 ```bash
 python main.py
 ```
+
+Create a portable executable:
+
+```bash
+pyinstaller --onefile --windowed --name "Karaoke" --icon "./static/icon.icns" main.py
+```
+
