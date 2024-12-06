@@ -30,15 +30,27 @@ Use the following command to install dependencies:
 pip install -r requirements.txt
 ```
 
-Use the following command to run the app:
+Use the following command to run the cli app:
 
 ```bash
-python main.py
+python ./cli/main.py
 ```
 
-Create a portable executable:
+Use the following command to run the gui app:
 
 ```bash
-pyinstaller --onefile --windowed --name "Karaoke" --icon "./static/icon.icns" main.py
+python ./gui/main.py
+```
+
+Create a portable executable for cli app:
+
+```bash
+pyinstaller --onefile --windowed --name "Karaoke" --distpath ./cli/output/dist --workpath ./cli/output/build --specpath ./cli/output --icon "icon.icns" --noconfirm ./cli/main.py
+```
+
+Create a portable executable for gui app:
+
+```bash
+pyinstaller --onefile --windowed --name "Karaoke" --distpath ./gui/output/dist --workpath ./gui/output/build --specpath ./gui/output --icon "icon.icns" --noconfirm ./gui/main.py
 ```
 
