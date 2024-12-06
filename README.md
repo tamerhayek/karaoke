@@ -27,30 +27,41 @@ deactivate
 Use the following command to install dependencies:
 
 ```bash
-pip install -r requirements.txt
+make install
 ```
 
 Use the following command to run the cli app:
 
 ```bash
-python ./cli/main.py
+make
+```
+
+or
+
+```bash
+make cli
 ```
 
 Use the following command to run the gui app:
 
 ```bash
-python ./gui/main.py
+make gui
 ```
 
 Create a portable executable for cli app:
 
 ```bash
-pyinstaller --onefile --windowed --name "Karaoke" --distpath ./cli/output/dist --workpath ./cli/output/build --specpath ./cli/output --icon "icon.icns" --noconfirm ./cli/main.py
+make build-cli
 ```
 
 Create a portable executable for gui app:
 
 ```bash
-pyinstaller --onefile --windowed --name "Karaoke" --distpath ./gui/output/dist --workpath ./gui/output/build --specpath ./gui/output --icon "icon.icns" --noconfirm ./gui/main.py
+make build-gui
 ```
 
+Create a portable executable for cli and gui app:
+
+```bash
+make build
+```
